@@ -8,6 +8,8 @@ import 'element-ui/lib/theme-chalk/index.css';
 //导入Buef
 import Buefy from  'buefy'
 import 'buefy/dist/buefy.css'
+//导入全局css样式
+import '@/assets/app.css'
 
 
 Vue.config.productionTip = false
