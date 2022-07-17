@@ -14,7 +14,7 @@ proxyObj['/'] = {
 };
 
 proxyObj['/ws'] = {
-    ws:true,
+    ws: true,
     target: 'ws://localhost:9090'
 };
 
