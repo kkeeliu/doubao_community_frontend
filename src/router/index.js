@@ -9,6 +9,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: () => import('@/views/Home')
+  },
+  {
+    path: '/404',
+    name: '404',
+    component: () => import('@/views/common/404')
   }
 ]
 
