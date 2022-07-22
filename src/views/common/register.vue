@@ -54,6 +54,8 @@
 </template>
 
 <script>
+import { postRequest } from '../../utills/api'
+
 export default {
   name: 'Register',
   data() {
@@ -113,10 +115,8 @@ export default {
       this.$refs[formName].validate((valid) => {
         if (valid) {
           this.loading = true
-          userRegister(this.ruleForm)
-            .then((value) => {
-              const { code, message } = value
-              if (code === 200) {
+          postRequest('/user/register',this.ruleForm) .then((resp) => {
+              if (resp) {
                 this.$message({
                   message: '账号注册成功',
                   type: 'success'
