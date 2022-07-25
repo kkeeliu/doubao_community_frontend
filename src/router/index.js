@@ -16,9 +16,14 @@ const routes = [
     component: () => import('@/views/common/404')
   },
   {
+    path: '/login',
+    name: '登录',
+    component: () => import('@/views/common/Login')
+  },
+  {
     path: '/register',
     name: '注册',
-    component: () => import('@/views/common/register')
+    component: () => import('../views/common/Register')
   }
 ]
 
