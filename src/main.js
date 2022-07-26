@@ -13,6 +13,7 @@ import '@/assets/app.css'
 import {deleteRequest, getRequest, postRequest, putRequest} from "./utills/api";
 import NProgress from "nprogress"
 import 'nprogress/nprogress.css'
+import getPageTitle from '@/utills/get-page-title'
 
 Vue.config.productionTip = false
 Vue.use(ElementUI);
@@ -21,6 +22,7 @@ Vue.use(Buefy)
 
 router.beforeEach((to, from, next) => {
   NProgress.start()
+  document.title = getPageTitle(to.meta.title)
   if (window.sessionStorage.getItem('tokenStr')){
     //判断用户信息是否存在，如果不存在
     if (!window.sessionStorage.getItem('user')){
